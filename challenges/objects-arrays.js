@@ -80,6 +80,25 @@ Once you have the new array created, sort the universities alphabetically and lo
 const universities = [];
 console.log(universities)
 
+// sort universities alphabetically 
+graduates.sort(function(a, b) {
+    var uniA = a.university.toLowerCase(),
+        uniB = b.university.toLowerCase()
+    if (uniA < uniB) //sort string ascending
+        return -1
+    if (uniA > uniB)
+        return 1
+    return 0 //default return value (no sorting)
+})
+
+// create new array of alphabetical universities and console log 
+
+for (let i = 0; i < graduates.length; i++) {
+    universities.push(graduates[i].university);
+}
+
+console.log(`all the universities in alphabetical order: ` + universities);
+
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
 The resulting contact information should have a space between the first name and the email information like this: 
