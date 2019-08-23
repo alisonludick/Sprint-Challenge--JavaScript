@@ -119,6 +119,11 @@ console.log(`name and email address: ` + contactInfo);
 const uni = [];
 console.log(uni);
 
+for (let i = 0; i < graduates.length; i++) {
+    uni.push(graduates[i].university.match(/Uni/));
+    console.log(uni[i]);
+}
+
 
 // ==== ADVANCED Array Methods ====
 
