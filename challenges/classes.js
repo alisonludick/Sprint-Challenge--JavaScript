@@ -34,3 +34,21 @@ console.log(realCube.surfaceArea(4, 5, 5)); // 130
 // Find out the formulas for volume and surface area for cubes and create those methods 
 // using the dimension properties from CuboidMaker.  
 // Test your work by logging out your volume and surface area.
+
+class CubeMaker extends cuboidd {
+    constructor(length, width, height) {
+        super(length, width, height);
+    }
+
+    volume() {
+        console.log(this.length * this.width * this.height);
+    }
+
+    surfaceArea() {
+        console.log(2 * (this.length * this.width + this.length * this.height + this.width * this.height));
+    }
+}
+
+const nuthaCube = new CubeMaker(7, 8, 9);
+console.log(nuthaCube.volume(7, 8, 9)); // 504
+console.log(nuthaCube.surfaceArea(7, 8, 9)); // 382
