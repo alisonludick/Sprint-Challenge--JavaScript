@@ -162,9 +162,15 @@ console.log(animalNames);
 The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 
 */
-
 const lowerCase = [];
 console.log(lowerCase);
+
+let lowCase = zooAnimals.map((zooAnimal, index, zooAnimals) => {
+    return zooAnimal.animal_name.toLowerCase();
+});
+
+console.log(lowCase);
+
 
 /* Request 3: .filter() 
 
@@ -173,6 +179,13 @@ The zoos are concenred about animals with a lower population count. Find out whi
 */
 const lowerPopulation = [];
 console.log(lowerPopulation);
+
+let largerPopulation = zooAnimals.filter(zooAnimal => {
+    if (zooAnimal.population <= 5) {
+        return true
+    };
+});
+console.log(largerPopulation);
 
 /* Request 4: .reduce() 
 
