@@ -78,7 +78,6 @@ const graduates = [{ "id": 1, "first_name": "Cynde", "university": "Missouri Sou
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-console.log(universities)
 
 // sort universities alphabetically 
 graduates.sort(function(a, b) {
@@ -106,24 +105,25 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
-console.log(contactInfo);
 
 for (let i = 0; i < graduates.length; i++) {
     contactInfo.push(graduates[i].first_name + " " + graduates[i].email);
 }
 
-console.log(`name and email address: ` + contactInfo);
+console.log(`name and email address: ${contactInfo}`);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-console.log(uni);
 
 for (let i = 0; i < graduates.length; i++) {
-    uni.push(graduates[i].university.match(/Uni/));
-    console.log(uni[i]);
+    if (graduates[i].university.match(/Uni/)) {
+        uni.push(graduates[i].university);
+        // console.log(uni[i]);
+    }
 }
 
+console.log(uni);
 
 // ==== ADVANCED Array Methods ====
 
@@ -153,7 +153,7 @@ const animalNames = [];
 
 zooAnimals.forEach(element => {
     animalNames.push(`names: ${element.animal_name}, scientific: ${element.scientific_name}`)
-});
+}); // these are called template literals 
 
 console.log(animalNames);
 
